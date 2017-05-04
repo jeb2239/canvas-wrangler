@@ -58,6 +58,8 @@ class CanvasAPI():
         r.raise_for_status()
         return r
 
+
+
     def get_response(self, url, payload=None):
         if payload is None:
             payload = {}
@@ -75,7 +77,7 @@ class CanvasAPI():
         url = self.api_url + api
 
 
-        print url
+        # print url
         responses = []
         while True:
 

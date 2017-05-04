@@ -183,7 +183,7 @@ for i, r in enumerate(grades):
                 print 'Not submitting comment for', r[uni_col]
                 print
     else:
-        missing_err.append((i+2, r[uni_col], r[grade_col], r[comment_col]))
+        # missing_err.append((i+2, r[uni_col], r[grade_col], r[comment_col]))
         print 'Warning:', r[uni_col], 'not found in sdb'
         print
 
@@ -201,9 +201,9 @@ if not args.no_log:
         log.write('=========================================================\n')
         log.write('====================== Error Log ========================\n')
         log.write('=========================================================\n')
-        log.write('Gradesheet filename: {0}\n'.format(grades_name)) 
-        log.write('Student database filename: {0}\n'.format(sdb_name)) 
-       
+        log.write('Gradesheet filename: {0}\n'.format(grades_name))
+        log.write('Student database filename: {0}\n'.format(sdb_name))
+
         log.write(err_report)
         if merrlen > 0:
             log.write('\n== Missing UNIs ==')
